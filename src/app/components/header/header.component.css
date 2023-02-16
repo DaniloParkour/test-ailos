@@ -28,19 +28,50 @@
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 1.25rem;
+  border: 2px solid var(--primary-color);
 }
 
 .avatar:hover {
-  border: 1px solid var(--primary-color);
+  filter: sepia(0.25);
   cursor: pointer;
 }
 
 .icon {
   font-size: 1.4rem;
   color: var(--primary-color);
+  position: relative;
 }
 
 .icon:hover {
   filter: brightness(1.5);
   cursor: pointer;
+}
+
+.icon::after {
+  content: '2';
+  height: 12px;
+  width: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  font-size: 0.6rem;
+  font-weight: bold;
+  border-radius: 6px;
+  background-color: #FF3545;
+  color: white;
+  position: absolute;
+  top: -4px;
+  left: 6px;
+}
+
+.avatardiv {
+  position: relative;
+}
+
+.gear {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  color: var(--primary-color);
 }
