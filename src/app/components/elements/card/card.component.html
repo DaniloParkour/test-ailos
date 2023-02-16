@@ -1,0 +1,35 @@
+<div class="card">
+  <h2 class="title">
+    {{title}}
+  </h2>
+  <p class="subtitle">
+    {{subTitle}}
+  </p>
+  <div class="info-area">
+
+    <div class="info" *ngFor="let info of infos">
+      <div>
+        <fa-icon
+          *ngIf="info.icon === 'user-large'"
+          [icon]="faUser"
+          class="icon"
+        ></fa-icon>
+        <fa-icon
+          *ngIf="info.icon === 'circle-check'"
+          [icon]="faCircleCheck"
+          class="icon check-ok"
+        ></fa-icon>
+        <fa-icon
+          *ngIf="info.icon === 'credit-card'"
+          [icon]="faCreditCard"
+          class="icon"
+        ></fa-icon>
+      </div>
+      <a *ngIf="info.label === ''" class="link" href="#">{{info.text}}</a>
+      <div *ngIf="info.label !== ''">
+        <p class="label">{{info.label}}</p>
+        <p class="text">{{info.text}}</p>
+      </div>
+    </div>
+  </div>
+</div>

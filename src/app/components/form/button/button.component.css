@@ -1,0 +1,38 @@
+.base {
+  padding: 0.42rem;
+  height: 2.2rem;
+  border: 2px solid var(--primary-color);
+}
+
+.form {
+  height: 1.8rem;
+}
+
+.primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.primary:hover {
+  filter: brightness(1.5);
+}
+
+.secondary {
+  background-color: rgba(255,255,255, 0.6);
+  color: var(--primary-color);
+}
+
+.pill {
+  background-color: rgba(255,255,255, 0.6);
+  color: var(--primary-color);
+
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 1.1rem;
+}
+
+.secondary:hover,
+.pill:hover {
+  filter: saturate(3);
+  background-color: var(--background-color);
+}

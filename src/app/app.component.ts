@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'desafio-ailos';
+
+  containsCardData = false;
+
+  cardDataChanged(event: any) {
+    if(event)
+      this.containsCardData = true;
+  }
 }

@@ -1,0 +1,46 @@
+.header {
+  background-color: white;
+  color: var(--black);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.title > h1 {
+  font-size: 1.64rem;
+}
+
+.title > p {
+  font-size: 1rem;
+  color: var(--grey);
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 1.25rem;
+}
+
+.avatar:hover {
+  border: 1px solid var(--primary-color);
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+}
+
+.icon:hover {
+  filter: brightness(1.5);
+  cursor: pointer;
+}

@@ -1,0 +1,29 @@
+.page {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  max-width: 1600px;
+  margin: 0 auto;
+  grid-template-areas:
+    "nav head"
+    "nav  content"
+    "nav  footer";
+  grid-template-rows: 4.5rem 1fr 3.75rem;
+  grid-template-columns: 5rem 1fr;
+}
+
+.nav {
+  grid-area: nav;
+}
+
+.head {
+  grid-area: head;
+}
+
+.content {
+  grid-area: content;
+}
+
+.footer {
+  grid-area: footer;
+}

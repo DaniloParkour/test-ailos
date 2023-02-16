@@ -1,0 +1,54 @@
+<div class="body">
+  <div class="tabs">
+    <div class="tab">
+      <div class="tab-item tab-enabled">
+        <p>Início</p>
+      </div>
+      <div class="tab-item tab-disabled">
+        <p>Documentos</p>
+      </div>
+      <div class="tab-item tab-disabled">
+        <p>Dados Cadastrais</p>
+      </div>
+      <div class="tab-item tab-disabled">
+        <p>Admissão</p>
+      </div>
+    </div>
+  </div>
+  <div class="form-panel">
+    <h2>Informe o CPF do futuro cooperado (a)</h2>
+    <p>Se necessário, você poderá duplicar uma conta existente ou pausar e retomar este cadastro futuramente.</p>
+    <p>Digite apenas os números (sem pontos ou traços).</p>
+    <div class="cpf-area">
+      <div class="input-cpf">
+        <label for="cpf">CPF</label>
+        <form>
+          <input
+            id="cpf"
+            placeholder="111.222.333-44"
+            name="cpfValue"
+            [(ngModel)]="cpfValue"
+          />
+        </form>
+      </div>
+      <app-button
+        (click)="checkCpf()"
+        class="button"
+        size="form"
+        text="Consultar por CPF"
+      />
+    </div>
+    <div class="cards">
+      
+      <div *ngFor="let card of cardsData">
+        <app-card
+          [title]="card.title"
+          [subTitle]="card.subTitle"
+          [infos]="card.infos"
+        />
+      </div>
+
+    </div>
+  </div>
+  <input type="text" mask="000.000.000-99" />
+</div>
