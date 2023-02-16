@@ -73,6 +73,7 @@
   display: flex;
   flex-direction: column;
   width: 18rem;
+  position: relative;
 }
 
 .input-cpf > label {
@@ -81,6 +82,15 @@
 
 .error-cpf {
   border: 1px solid #FF3545;
+}
+
+.error-text {
+  position: absolute;
+  top: 3rem;
+  color: #FF3545;
+  font-size: 0.78rem;  
+  padding-left: 0.4rem;
+  font-style: italic;
 }
 
 .input-cpf > form > input {

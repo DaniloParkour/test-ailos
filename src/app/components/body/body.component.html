@@ -31,6 +31,7 @@
             [(ngModel)]="cpfValue"
             [class]="showErrorCpf"
           />
+          <p *ngIf="showErrorCpf === 'error-cpf'" class="error-text">CPF inválido</p>
         </form>
       </div>
       <app-button
