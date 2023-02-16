@@ -75,6 +75,10 @@
   width: 18rem;
 }
 
+.input-cpf > label {
+  font-size: 0.95rem;
+}
+
 .error-cpf {
   border: 1px solid #FF3545;
 }

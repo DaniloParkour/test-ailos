@@ -10,13 +10,7 @@ import { BodyComponent } from './components/body/body.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CardComponent } from './components/elements/card/card.component';
 import { ButtonComponent } from './components/form/button/button.component';
-import { IConfig, provideEnvironmentNgxMask, provideNgxMask, NgxMaskDirective } from 'ngx-mask';
-
-const maskConfigFunction: () => Partial<IConfig> = () => {
-  return {
-    validation: false,
-  };
-};
+import { provideNgxMask, NgxMaskDirective } from 'ngx-mask';
 
 @NgModule({
   declarations: [
@@ -34,7 +28,6 @@ const maskConfigFunction: () => Partial<IConfig> = () => {
     FontAwesomeModule,
     NgxMaskDirective
   ],
-  // providers: [provideEnvironmentNgxMask(maskConfigFunction)],
   providers: [provideNgxMask()],
   bootstrap: [AppComponent]
 })
