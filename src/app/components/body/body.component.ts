@@ -10,16 +10,21 @@ export class BodyComponent {
 
   @Output() cardDataChanged = new EventEmitter();
 
+  showErrorCpf = 'none';
   cpfValue: string = '';
   cardsData: any;
 
   checkCpf() {
 
-    //Mask and Validation
-    this.cardsData = this.getData();
+    this.showErrorCpf = 'none';
 
-    this.cardDataChanged.emit(this.cardsData);
-    
+    if(this.cpfValue.length === 11) {
+      this.cardsData = this.getData();
+      this.cardDataChanged.emit(this.cardsData);
+    } else {
+      this.showErrorCpf = 'error-cpf';
+    }
+
   }
 
   getData() {

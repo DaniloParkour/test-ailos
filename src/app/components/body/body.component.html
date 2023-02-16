@@ -26,8 +26,10 @@
           <input
             id="cpf"
             placeholder="111.222.333-44"
+            mask="000.000.000-00"
             name="cpfValue"
             [(ngModel)]="cpfValue"
+            [class]="showErrorCpf"
           />
         </form>
       </div>
@@ -50,5 +52,4 @@
 
     </div>
   </div>
-  <input type="text" mask="000.000.000-99" />
 </div>
